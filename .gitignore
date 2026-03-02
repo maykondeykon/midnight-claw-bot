@@ -1,0 +1,10 @@
+# Secrets
+.github-token
+
+# Temp files
+*.tmp
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

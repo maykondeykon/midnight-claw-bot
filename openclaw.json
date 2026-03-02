@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.1",
+    "lastTouchedAt": "2026-03-02T12:15:23.258Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-02T12:15:23.220Z",
+    "lastRunVersion": "2026.3.1",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
+      },
+      "xai:default": {
+        "provider": "xai",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "custom-api-us-west-2-modal-direct": {
+        "baseUrl": "https://api.us-west-2.modal.direct/v1",
+        "apiKey": "modalresearch_ncs1Cjr78m3wNrqvkAI61RMB5Iki28618x_MYr3u4T8",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "zai-org/GLM-5-FP8",
+            "name": "zai-org/GLM-5-FP8 (Custom Provider)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 16000,
+            "maxTokens": 4096
+          }
+        ]
+      },
+      "xai": {
+        "baseUrl": "https://api.x.ai/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "grok-4",
+            "name": "Grok 4",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "custom-api-us-west-2-modal-direct/zai-org/GLM-5-FP8",
+        "fallbacks": [
+          "openrouter/auto",
+          "groq/llama-3.3-70b-versatile",
+          "google/gemini-2.5-flash",
+          "google/gemini-3-pro-preview"
+        ]
+      },
+      "models": {
+        "custom-api-us-west-2-modal-direct/zai-org/GLM-5-FP8": {
+          "alias": "GLM-5"
+        },
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "openrouter/openrouter/auto": {},
+        "google/gemini-3-pro-preview": {},
+        "google/gemini-2.5-flash": {},
+        "xai/grok-4": {
+          "alias": "Grok"
+        },
+        "groq/llama-3.3-70b-versatile": {}
+      },
+      "workspace": "/home/maykon/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8330887913:AAGWKwk_cLzUnybGMESFIb3b8ZM3DTTn350",
+      "groupPolicy": "allowlist",
+      "streaming": "off"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "357d9f37e87b83066aed8c68538bdea78a52535dcfd28a57"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "skills": {
+    "entries": {
+      "notion": {
+        "apiKey": "${NOTION_API_KEY}"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}
