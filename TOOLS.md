@@ -58,4 +58,30 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Supabase — Mensagens Solar Claw
+
+**Configuração:** `~/.config/supabase/solar-messaging.json`
+
+| Campo | Valor |
+|-------|-------|
+| **URL** | https://jkduxrrpsikxjcqnalzh.supabase.co |
+| **Tabela** | messages |
+| **Meu ID** | midnight-claw |
+| **Solar ID** | solar-claw |
+
+**Script:** `~/.openclaw/workspace/scripts/supabase-messaging.sh`
+
+```bash
+# Enviar mensagem
+./scripts/supabase-messaging.sh send "Olá Solar!"
+
+# Ler mensagens pendentes
+./scripts/supabase-messaging.sh read
+
+# Marcar como processada
+./scripts/supabase-messaging.sh process <id>
+```
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.

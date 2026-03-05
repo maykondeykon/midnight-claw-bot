@@ -19,6 +19,15 @@
 - **Configurado em**: 2026-03-05
 - **Nota**: Token de acesso já configurado no remote
 
+### Comunicação Solar Claw (Supabase)
+- **URL**: https://jkduxrrpsikxjcqnalzh.supabase.co
+- **Tabela**: messages
+- **Meu ID**: midnight-claw
+- **Solar ID**: solar-claw
+- **Config**: `~/.config/supabase/solar-messaging.json`
+- **Script**: `~/.openclaw/workspace/scripts/supabase-messaging.sh`
+- **Configurado em**: 2026-03-05
+
 ---
 
 ## Projetos Ativos
