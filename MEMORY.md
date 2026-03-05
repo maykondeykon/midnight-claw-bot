@@ -26,6 +26,8 @@
 - **Solar ID**: solar-claw
 - **Config**: `~/.config/supabase/solar-messaging.json`
 - **Script**: `~/.openclaw/workspace/scripts/supabase-messaging.sh`
+- **Verificação**: A cada 15 min via cron (`*/15 * * * *`)
+- **Inbox**: `~/.openclaw/workspace/memory/solar-inbox.json`
 - **Configurado em**: 2026-03-05
 
 ---
