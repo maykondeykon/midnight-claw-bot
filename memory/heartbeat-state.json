@@ -1,0 +1,10 @@
+{
+  "lastResumoSent": null,
+  "lastResumoSentAttempt": "2026-03-05T07:53:00Z",
+  "lastResumoSentError": "Brave API key not configured",
+  "lastChecks": {
+    "tasks": "2026-03-05T09:23:00Z",
+    "calendar": "2026-03-05T09:23:00Z",
+    "heartbeat": "2026-03-05T13:46:00Z"
+  }
+}
