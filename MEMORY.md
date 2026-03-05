@@ -10,6 +10,15 @@
 - **Configurado em**: 2026-03-03
 - **Nota**: Não usar cron — o gateway não estava rodando e o cron não disparou. Heartbeat é mais confiável.
 
+### Backup GitHub (Automático)
+- **Repositório**: https://github.com/maykondeykon/midnight-claw-bot.git
+- **Horário**: 03:00 (madrugada)
+- **Script**: `~/.openclaw/workspace/backup.sh`
+- **Log**: `~/.openclaw/workspace/backup.log`
+- **Cron**: `0 3 * * *`
+- **Configurado em**: 2026-03-05
+- **Nota**: Token de acesso já configurado no remote
+
 ---
 
 ## Projetos Ativos
