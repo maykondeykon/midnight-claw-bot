@@ -33,11 +33,14 @@
 ### Google Calendar + Tasks
 - **Project ID**: midnight-claw
 - **Credentials**: `~/.config/google/credentials.json`
-- **Token**: `~/.config/google/token.json` (gerado após primeira auth)
+- **Token**: `~/.config/google/token.json` ✅ Gerado
 - **Script**: `~/.openclaw/workspace/scripts/google-integration.py`
+- **Update Script**: `~/.openclaw/workspace/scripts/update-google-data.sh`
 - **Output**: `~/.openclaw/workspace/memory/google-data.json`
 - **Scopes**: calendar.readonly, tasks.readonly
+- **Cron**: `0 7 * * *` (atualiza dados às 07:00)
 - **Configurado em**: 2026-03-08
+- **Status**: ✅ Funcionando
 
 ---
 

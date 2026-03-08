@@ -3,9 +3,9 @@
   "lastResumoSentAttempt": "2026-03-08T08:24:00Z",
   "lastResumoSentError": "Brave API key not configured - outside time window",
   "lastChecks": {
-    "tasks": "2026-03-08T09:54:00Z",
+    "tasks": "2026-03-08T13:39:00Z",
     "calendar": null,
-    "heartbeat": "2026-03-08T11:24:00Z"
+    "heartbeat": "2026-03-08T13:39:00Z"
   },
   "lastBackup": {
     "time": "2026-03-08T03:00:00Z",

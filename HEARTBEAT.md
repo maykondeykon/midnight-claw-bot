@@ -24,6 +24,11 @@ Se estiver entre 07:55 e 08:15 e ainda não foi enviado o resumo hoje, gerar e e
 - Outras tarefas agendadas (verificar logs/systemd)
 - Reportar sucesso ou falha
 
+### Verificação de Google (07:00):
+- Executar `scripts/update-google-data.sh`
+- Ler `memory/google-data.json`
+- Incluir compromissos e tarefas no resumo
+
 ### Verificação de Ideias:
 - Ler `IDEIAS.md` e reportar ideias pendentes
 - Se houver ideias novas desde último resumo, destacar
