@@ -36,8 +36,11 @@ def authenticate():
         else:
             flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
             
+            # Define redirect URI explicitamente
+            flow.redirect_uri = 'http://localhost'
+            
             # Fluxo manual para SSH/headless
-            auth_url, _ = flow.authorization_url(prompt='consent')
+            auth_url, _ = flow.authorization_url(prompt='consent', access_type='offline')
             print("\n" + "="*60)
             print("Abra esta URL no navegador:")
             print(auth_url)
