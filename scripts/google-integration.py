@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/maykon/.openclaw/workspace/venv/bin/python3
 """
 Integração Google Calendar + Tasks para Midnight Claw
 Lê eventos e tarefas e salva em JSON para o heartbeat consumir
@@ -35,7 +35,9 @@ def authenticate():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-            creds = flow.run_local_server(port=0)
+            # Usa flow manual em vez de abrir navegador automaticamente
+            flow.run_console()
+            creds = flow.credentials
         
         # Salva token para próxima execução
         with open(TOKEN_FILE, 'w') as token:
