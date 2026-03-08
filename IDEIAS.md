@@ -14,6 +14,17 @@ _Coisas que surgem durante o dia e merecem ser lembradas._
 
 ## 💡 Ideias Pendentes
 
+### 2026-03-07 — Integração com Gmail para compromissos e tarefas
+**Status:** Pendente
+**Descrição:** Configurar o Midnight Claw para ler compromissos e lista de tarefas do Gmail do Maykon. Incluir no resumo diário e/ou heartbeat.
+**Próximos passos:**
+- Verificar API do Google Calendar
+- Verificar API do Google Tasks
+- Configurar OAuth/credenciais
+- Implementar leitura no heartbeat
+
+---
+
 ### 2026-03-03 — API de comunicação entre Midnight e Solar Claw
 **Status:** Pendente
 **Descrição:** Criar uma API no GCP (Solar Claw) pra permitir comunicação direta entre os dois agentes. REST simples com endpoints `/message`, `/status`, `/task`. Pode rodar no Cloud Run (free tier).
