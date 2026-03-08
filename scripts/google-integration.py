@@ -35,8 +35,19 @@ def authenticate():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-            # Usa flow manual em vez de abrir navegador automaticamente
-            flow.run_console()
+            
+            # Fluxo manual para SSH/headless
+            auth_url, _ = flow.authorization_url(prompt='consent')
+            print("\n" + "="*60)
+            print("Abra esta URL no navegador:")
+            print(auth_url)
+            print("="*60)
+            
+            # Solicita código de autorização
+            code = input("\nCole o código de autorização aqui: ").strip()
+            
+            # Troca código por token
+            flow.fetch_token(code=code)
             creds = flow.credentials
         
         # Salva token para próxima execução
