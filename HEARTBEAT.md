@@ -10,8 +10,10 @@ Se estiver entre 07:55 e 08:15 e ainda não foi enviado o resumo hoje, gerar e e
 3. 💻 **Desenvolvimento** — 5 atualizações do mundo dev
 4. 📊 **Mercado Tech** — panorama rápido
 5. 💰 **Cotação** — EUR → BRL atualizada
-6. 🌙 **Tarefas Noturnas** — status do backup GitHub e outras tarefas agendadas
+6. 🌙 **Backup GitHub** — status do backup automático da madrugada
 7. 💡 **Ideias Pendentes** — resumo das ideias em IDEIAS.md (se houver)
+8. 📅 **Compromissos** — eventos do Google Calendar (próximos 2 dias)
+9. ✅ **Tarefas** — tarefas pendentes do Google Tasks
 
 ### Controle:
 - Registrar em `memory/heartbeat-state.json` a data/hora do último resumo enviado

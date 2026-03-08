@@ -84,4 +84,27 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Google Calendar + Tasks
+
+**Configuração:** `~/.config/google/credentials.json`
+
+| Campo | Valor |
+|-------|-------|
+| **Project ID** | midnight-claw |
+| **Scopes** | calendar.readonly, tasks.readonly |
+| **Token** | `~/.config/google/token.json` (gerado após primeira auth) |
+
+**Script:** `~/.openclaw/workspace/scripts/google-integration.py`
+
+```bash
+# Executar integração (gera memory/google-data.json)
+python3 scripts/google-integration.py
+```
+
+**Output:** `memory/google-data.json`
+- `calendar`: Eventos dos próximos 2 dias
+- `tasks`: Tarefas pendentes
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.

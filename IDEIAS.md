@@ -47,6 +47,7 @@ _Coisas que surgem durante o dia e merecem ser lembradas._
 
 | Data | Ideia | Resultado |
 |------|-------|-----------|
+| 2026-03-08 | Integração Google Calendar + Tasks | Script Python criado, lê eventos e tarefas, salva em JSON |
 | 2026-03-03 | Reorganizar tarefas CorteClub no Notion | 20 tarefas recriadas em ordem lógica de implementação FSM |
 | 2026-03-03 | Personalidade do Solar Claw | Criado SOUL.md com vibe jovial e empolgado |
 

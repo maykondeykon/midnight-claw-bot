@@ -30,6 +30,15 @@
 - **Inbox**: `~/.openclaw/workspace/memory/solar-inbox.json`
 - **Configurado em**: 2026-03-05
 
+### Google Calendar + Tasks
+- **Project ID**: midnight-claw
+- **Credentials**: `~/.config/google/credentials.json`
+- **Token**: `~/.config/google/token.json` (gerado após primeira auth)
+- **Script**: `~/.openclaw/workspace/scripts/google-integration.py`
+- **Output**: `~/.openclaw/workspace/memory/google-data.json`
+- **Scopes**: calendar.readonly, tasks.readonly
+- **Configurado em**: 2026-03-08
+
 ---
 
 ## Projetos Ativos
