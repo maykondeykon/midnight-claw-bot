@@ -107,4 +107,31 @@ python3 scripts/google-integration.py
 
 ---
 
+## GitHub — Acesso a Repositórios
+
+### Token Pessoal (maykondeykon)
+- **Arquivo:** `~/.config/github/pat_readonly`
+- **Permissão:** Read-only
+- **Repos:** gopdv-backend, solar-claw-bot, scripts, etc.
+
+### Token Organização (deykonsolutions)
+- **Arquivo:** `~/.config/github/pat_deykonsolutions`
+- **Permissão:** Read-only
+- **Repos:** corteclub-api, gopdv-*, corte_club, etc.
+
+### SSH Key
+- **Privada:** `~/.ssh/midnight_claw`
+- **Pública:** `~/.ssh/midnight_claw.pub`
+- **Comentário:** midnight-claw@openclaw
+
+### Repositórios Principais
+| Projeto | Repo |
+|---------|------|
+| CorteClub API | `deykonsolutions/corteclub-api` |
+| GoPDV Backend | `deykonsolutions/gopdv-backend` |
+| GoPDV Frontend | `deykonsolutions/gopdv-frontend` |
+| Solar Claw Bot | `maykondeykon/solar-claw-bot` |
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
