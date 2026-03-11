@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-09T07:00:03.049674",
+  "updated_at": "2026-03-10T07:00:03.051177",
   "calendar": [],
   "tasks": [
     {
-      "title": "Ligar pra assistência da máquina de lavar loiça",
+      "title": "Comprar anticongelante para o carro",
       "notes": "",
       "due": "",
       "list": "My Tasks"
@@ -12,18 +12,6 @@
       "title": "Entrar em contato com assistência da Jocca",
       "notes": "",
       "due": "",
-      "list": "My Tasks"
-    },
-    {
-      "title": "Registrar consumo de gás",
-      "notes": "",
-      "due": "2026-03-05T00:00:00.000Z",
-      "list": "My Tasks"
-    },
-    {
-      "title": "Pagar gás",
-      "notes": "",
-      "due": "2026-03-09T00:00:00.000Z",
       "list": "My Tasks"
     },
     {

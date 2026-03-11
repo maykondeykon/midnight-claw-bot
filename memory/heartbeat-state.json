@@ -1,15 +1,15 @@
 {
-  "lastResumoSent": null,
-  "lastResumoSentAttempt": "2026-03-09T08:09:00Z",
-  "lastResumoSentError": "Brave API key not configured",
+  "lastResumoSent": "2026-03-10T08:01:00Z",
+  "lastResumoSentAttempt": "2026-03-10T08:01:00Z",
+  "lastResumoSentError": null,
   "lastChecks": {
     "tasks": "2026-03-09T12:39:00Z",
     "calendar": "2026-03-09T12:39:00Z",
     "heartbeat": "2026-03-09T17:39:00Z"
   },
   "lastBackup": {
-    "time": "2026-03-09T03:00:00Z",
+    "time": "2026-03-10T03:00:00Z",
     "status": "success",
-    "commit": "f98daa1"
+    "commit": "2084ea4"
   }
 }
