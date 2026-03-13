@@ -1,15 +1,14 @@
 {
-  "lastResumoSent": "2026-03-10T08:01:00Z",
-  "lastResumoSentAttempt": "2026-03-11T08:00:00Z",
-  "lastResumoSentError": "Brave Search API key not configured",
+  "lastResumoSent": "2026-03-12T08:00:00Z",
+  "lastResumoSentAttempt": "2026-03-12T08:00:00Z",
   "lastChecks": {
-    "tasks": "2026-03-09T12:39:00Z",
-    "calendar": "2026-03-09T12:39:00Z",
-    "heartbeat": "2026-03-11T19:30:00Z"
+    "tasks": "2026-03-12T17:34:00Z",
+    "calendar": "2026-03-12T17:34:00Z",
+    "heartbeat": "2026-03-12T22:30:00Z"
   },
   "lastBackup": {
-    "time": "2026-03-11T03:00:00Z",
+    "time": "2026-03-12T03:00:00Z",
     "status": "success",
-    "commit": "e1df18c"
+    "commit": "2cda400"
   }
 }
