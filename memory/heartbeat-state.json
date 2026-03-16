@@ -1,14 +1,14 @@
 {
-  "lastResumoSent": "2026-03-14T08:15:00Z",
-  "lastResumoSentAttempt": "2026-03-14T08:15:00Z",
+  "lastResumoSent": "2026-03-15T08:12:00Z",
+  "lastResumoSentAttempt": "2026-03-15T08:12:00Z",
   "lastChecks": {
     "tasks": "2026-03-13T18:11:00Z",
     "calendar": "2026-03-13T18:11:00Z",
-    "heartbeat": "2026-03-13T18:11:00Z"
+    "heartbeat": "2026-03-15T12:10:00Z"
   },
   "lastBackup": {
-    "time": "2026-03-13T03:00:00Z",
+    "time": "2026-03-15T03:00:00Z",
     "status": "success",
-    "commit": "a20bcc8"
+    "commit": "3e4d209"
   }
 }
