@@ -14,32 +14,14 @@ _Coisas que surgem durante o dia e merecem ser lembradas._
 
 ## 💡 Ideias Pendentes
 
-### 2026-03-07 — Integração com Gmail para compromissos e tarefas
-**Status:** Pendente
-**Descrição:** Configurar o Midnight Claw para ler compromissos e lista de tarefas do Gmail do Maykon. Incluir no resumo diário e/ou heartbeat.
+### 2026-03-16 — Serviço automático de envio de e-mail para filhos
+**Status:** Nova
+**Descrição:** Usar o servidor do Solar Claw (GCP free tier) para criar um serviço automático de envio de e-mail. Objetivo: enviar vídeos e mensagens aos filhos em datas especiais, mesmo após a partida. O serviço leria um repositório GitHub para links de vídeos não listados no YouTube, um arquivo de configuração com links, e-mail e mensagens, e dispararia o e-mail.
 **Próximos passos:**
-- Verificar API do Google Calendar
-- Verificar API do Google Tasks
-- Configurar OAuth/credenciais
-- Implementar leitura no heartbeat
-
----
-
-### 2026-03-03 — API de comunicação entre Midnight e Solar Claw
-**Status:** Pendente
-**Descrição:** Criar uma API no GCP (Solar Claw) pra permitir comunicação direta entre os dois agentes. REST simples com endpoints `/message`, `/status`, `/task`. Pode rodar no Cloud Run (free tier).
-**Próximos passos:**
-- Definir escopo mínimo (MVP)
-- Decidir entre Cloud Run vs Compute Engine
-- Especificar endpoints
-- Solar Claw implementa
-
----
-
-### 2026-03-03 — Resumo diário via heartbeat
-**Status:** Implementado ✅
-**Descrição:** Gerar resumo diário de notícias (tech, IA, dev, mercado, câmbio) às 08:00 via heartbeat ao invés de cron.
-**Conclusão:** Gateway não estava rodando, cron falhou. Solução: heartbeat com controle em `memory/heartbeat-state.json`.
+- Detalhar arquitetura do serviço
+- Definir formato do arquivo de configuração
+- Implementar serviço no GCP
+- Criar repositório GitHub para configurações
 
 ---
 
@@ -47,15 +29,18 @@ _Coisas que surgem durante o dia e merecem ser lembradas._
 
 | Data | Ideia | Resultado |
 |------|-------|-----------|
-| 2026-03-08 | Integração Google Calendar + Tasks | Script Python criado, lê eventos e tarefas, salva em JSON |
+| 2026-03-08 | Integração Google Calendar + Tasks | Script Python criado, lê eventos e tarefas, salva em JSON; incluído no resumo diário |
 | 2026-03-03 | Reorganizar tarefas CorteClub no Notion | 20 tarefas recriadas em ordem lógica de implementação FSM |
 | 2026-03-03 | Personalidade do Solar Claw | Criado SOUL.md com vibe jovial e empolgado |
+| 2026-03-03 | Resumo diário via heartbeat | Gerar resumo diário de notícias (tech, IA, dev, mercado, câmbio) às 08:00 via heartbeat |
 
 ---
 
 ## ❌ Ideias Descartadas
 
-_Nenhuma por enquanto._
+| Data | Ideia | Motivo |
+|------|-------|--------|
+| 2026-03-16 | API de comunicação entre Midnight e Solar Claw | Cancelada pelo Maykon |
 
 ---
 
