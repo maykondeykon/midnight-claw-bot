@@ -1,87 +1,40 @@
-# MEMORY.md - Memória de Longo Prazo
 
-## Configurações Importantes
 
-### Resumo Diário (Heartbeat)
-- **Horário**: 08:00 (Lisboa)
-- **Conteúdo**: Tecnologia (5), IA (5), Desenvolvimento (5), Mercado Tech, EUR/BRL
-- **Arquivo de controle**: `memory/heartbeat-state.json`
-- **Instruções**: `HEARTBEAT.md`
-- **Configurado em**: 2026-03-03
-- **Nota**: Não usar cron — o gateway não estava rodando e o cron não disparou. Heartbeat é mais confiável.
+### Resolução de Problema: Navegação na Internet / Erro "Missing X server or $DISPLAY"
 
-### Backup GitHub (Automático)
-- **Repositório**: https://github.com/maykondeykon/midnight-claw-bot.git
-- **Horário**: 03:00 (madrugada)
-- **Script**: `~/.openclaw/workspace/backup.sh`
-- **Log**: `~/.openclaw/workspace/backup.log`
-- **Cron**: `0 3 * * *`
-- **Configurado em**: 2026-03-05
-- **Nota**: Token de acesso já configurado no remote
+**Data:** 2026-03-18
 
-### Comunicação Solar Claw (Supabase)
-- **URL**: https://jkduxrrpsikxjcqnalzh.supabase.co
-- **Tabela**: messages
-- **Meu ID**: midnight-claw
-- **Solar ID**: solar-claw
-- **Config**: `~/.config/supabase/solar-messaging.json`
-- **Script**: `~/.openclaw/workspace/scripts/supabase-messaging.sh`
-- **Verificação**: A cada 15 min via cron (`*/15 * * * *`)
-- **Inbox**: `~/.openclaw/workspace/memory/solar-inbox.json`
-- **Configurado em**: 2026-03-05
+**Problema:**
+Após a atualização do OpenClaw (para 2026.3.13) e a instalação do plugin `lossless-claw`, o OpenClaw perdeu a capacidade de usar a ferramenta `browser`. As tentativas de navegação resultavam no erro persistente "Error: Failed to start Chrome CDP on port 18800 for profile 'openclaw'. Chrome stderr: Authorization required, but no authorization protocol specified [...] Missing X server or $DISPLAY [...] The platform failed to initialize. Exiting."
 
-### Google Calendar + Tasks
-- **Project ID**: midnight-claw
-- **Credentials**: `~/.config/google/credentials.json`
-- **Token**: `~/.config/google/token.json` ✅ Gerado
-- **Script**: `~/.openclaw/workspace/scripts/google-integration.py`
-- **Update Script**: `~/.openclaw/workspace/scripts/update-google-data.sh`
-- **Output**: `~/.openclaw/workspace/memory/google-data.json`
-- **Scopes**: calendar.readonly, tasks.readonly
-- **Cron**: `0 7 * * *` (atualiza dados às 07:00)
-- **Configurado em**: 2026-03-08
-- **Status**: ✅ Funcionando
+**Análise Inicial:**
+*   A navegação funcionava antes da atualização.
+*   A execução do gateway via `systemctl --user` resultava em um ambiente sem acesso às variáveis gráficas (`$DISPLAY`, `XAUTHORITY`).
+*   O servidor Manjaro apresentava problemas gráficos locais (tela de login do XFCE travada) após a instalação de uma ferramenta de acesso remoto, tornando inviável o acesso direto a um X server real.
+*   Tentativas de configurar `browser.noSandbox: true`, `export DISPLAY=:0.0` e `xhost +local:` não resolveram, pois o problema era mais fundamental: o processo do OpenClaw não conseguia "enxergar" um X server funcional. Mesmo o `xhost` falhava com "Authorization required", indicando um problema com o próprio ambiente gráfico do usuário `maykon` ao tentar interagir com o X server.
+*   O modo headless do Chrome ainda exige um display X (real ou virtual).
 
----
+**Solução Encontrada:**
+A solução foi implementar um **X Virtual Framebuffer (XVFB)** para simular um display gráfico em memória, desacoplando a necessidade do browser de um X server físico funcional.
 
-## Projetos Ativos
+**Passos:**
+1.  **Instalação do XVFB:**
+    `sudo pacman -S xorg-server-xvfb` (no Manjaro)
+2.  **Verificação e Ajuste de Permissões (se necessário):**
+    Identificado que `/dev/dri/card0` tinha grupo `video`. O usuário `maykon` foi adicionado ao grupo `video` para resolver o erro `libEGL warning: failed to open /dev/dri/card0: Permission denied` ao iniciar o XVFB.
+    `sudo usermod -aG video maykon`
+    **(Importante: Logout e Login da sessão de usuário necessários após a adição ao grupo)**
+3.  **Início do XVFB:**
+    `Xvfb :99 -screen 0 1024x768x24 &`
+    Este comando inicia o servidor X virtual no display `:99` em segundo plano.
+4.  **Configuração da Variável `$DISPLAY`:**
+    `export DISPLAY=:99`
+    Esta variável deve ser configurada no ambiente onde o gateway do OpenClaw é executado.
+5.  **Início Manual do Gateway OpenClaw:**
+    Para teste, o serviço `systemctl --user openclaw-gateway.service` foi parado (`systemctl --user stop openclaw-gateway.service`), e o gateway foi iniciado manualmente no terminal onde `$DISPLAY` foi exportado (`openclaw gateway start`).
 
-### CorteClub
-- **Status**: Em desenvolvimento
-- **v3**: n8n_main_bia (será descontinuado)
-- **v4**: API Python em desenvolvimento
-- **Repo**: https://github.com/deykonsolutions/corteclub-api.git
-- **Notion Project ID**: 30f38d59-393c-8143-ac9a-ce783942a1c2
+**Resultado:**
+Após a configuração do XVFB e a correta definição do `$DISPLAY`, o OpenClaw foi capaz de iniciar o navegador (`browser(action="navigate", url="https://www.google.com")`) com sucesso, restaurando sua capacidade de acesso à internet.
 
-### GoPDV
-- **Status**: Em andamento
-- **Repos**: gopdv-landingpage, gopdv-backend, gopdv-frontend, gopdv-infra
-
----
-
-## Notion
-
-- **API Version**: 2025-09-03
-- **API Key**: ~/.config/notion/api_key
-- **Tasks Database (data_source_id)**: 30e38d59-393c-817b-bb75-000b3b2d267f
-- **Projects Database (data_source_id)**: 30f38d59-393c-8193-b000-000b7636ea40
-- **Projects Database**: 30f38d59-393c-818f-bd8c-e12ddbb78dd3
-- **Status "A Fazer" ID**: 4c2e4866-4b3a-45f1-8b94-b6b9b37a0c6a
-- **Status "Feito" ID**: 310c1664-4c44-406c-8e41-bee44a2951bb
-
----
-
-## Infraestrutura Docker (EXTREMIS)
-
-| Container | Porta | Propósito |
-|-----------|-------|-----------|
-| n8n | 5678 | Playground pessoal |
-| n8n_main_bia | 5679 | CorteClub v3 (será desativado) |
-| evolution_api | 8080 | Evolution API |
-| evolution_bia | 8081 | Evolution API (Bia/CorteClub) |
-| postgres_bia | 5432 | PostgreSQL (Bia) |
-| postgres_evo | 5433 | PostgreSQL (Evolution) |
-| redis_bia | - | Redis (Bia) |
-| redis_evo | - | Redis (Evolution) |
-| jellyfin | 8097, 7359, 8921, 1901 | Media server |
-| qbittorrent | 8181, 6881/udp | Torrent client |
+**Conclusão:**
+O XVFB provou ser uma solução robusta para ambientes headless onde o acesso a um X server físico é problemático ou inexistente, permitindo que aplicações que dependem de um display gráfico (como o Chrome) funcionem de forma virtualizada.
