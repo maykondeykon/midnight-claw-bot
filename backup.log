@@ -125,3 +125,27 @@ To https://github.com/maykondeykon/midnight-claw-bot.git
 === Backup finalizado em 2026-03-19 03:00:01 ===
 
 === Backup iniciado em 2026-03-20 03:00:00 ===
+warning: adding embedded git repository: corteclub-api
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint: 	git submodule add <url> corteclub-api
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint: 	git rm --cached corteclub-api
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config set advice.addEmbeddedRepo false"
+[master 5c8d2d8] Backup automático - 2026-03-20 03:00
+ 4 files changed, 76 insertions(+), 6 deletions(-)
+ create mode 160000 corteclub-api
+To https://github.com/maykondeykon/midnight-claw-bot.git
+   c922617..5c8d2d8  master -> master
+✅ Backup concluído com sucesso!
+=== Backup finalizado em 2026-03-20 03:00:02 ===
+
+=== Backup iniciado em 2026-03-21 03:00:01 ===

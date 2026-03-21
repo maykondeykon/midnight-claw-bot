@@ -1,15 +1,16 @@
 {
-  "lastResumoSent": "2026-03-19T07:56:00Z",
-  "lastResumoSentAttempt": "2026-03-19T07:56:00Z",
+  "lastResumoSent": "2026-03-20T08:00:00Z",
+  "lastResumoSentAttempt": "2026-03-20T08:00:00Z",
   "lastChecks": {
-    "tasks": "2026-03-19T07:56:00Z",
-    "calendar": "2026-03-19T07:56:00Z",
-    "heartbeat": "2026-03-19T07:56:00Z",
-    "exchangeRate": "2026-03-19T07:58:00Z"
+    "tasks": "2026-03-20T08:00:00Z",
+    "calendar": "2026-03-20T08:00:00Z",
+    "heartbeat": "2026-03-20T08:00:00Z",
+    "exchangeRate": "2026-03-20T08:00:00Z"
   },
   "lastBackup": {
-    "time": "2026-03-18T03:00:00Z",
+    "time": "2026-03-20T03:00:00Z",
     "status": "success",
-    "commit": "7fc86ac"
-  }
+    "commit": "5c8d2d8"
+  },
+  "googleTokenExpired": "2026-03-16T00:00:00Z"
 }
