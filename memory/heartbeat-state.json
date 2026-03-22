@@ -1,11 +1,11 @@
 {
-  "lastResumoSent": "2026-03-20T08:00:00Z",
-  "lastResumoSentAttempt": "2026-03-20T08:00:00Z",
+  "lastResumoSent": "2026-03-21T08:00:00Z",
+  "lastResumoSentAttempt": "2026-03-21T08:00:00Z",
   "lastChecks": {
-    "tasks": "2026-03-20T08:00:00Z",
-    "calendar": "2026-03-20T08:00:00Z",
-    "heartbeat": "2026-03-20T08:00:00Z",
-    "exchangeRate": "2026-03-20T08:00:00Z"
+    "tasks": "2026-03-21T08:00:00Z",
+    "calendar": "2026-03-21T08:00:00Z",
+    "heartbeat": "2026-03-21T08:00:00Z",
+    "exchangeRate": "2026-03-21T08:00:00Z"
   },
   "lastBackup": {
     "time": "2026-03-20T03:00:00Z",
