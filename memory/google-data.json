@@ -1,13 +1,7 @@
 {
-  "updated_at": "2026-03-15T07:00:04.287985",
+  "updated_at": "2026-03-23T09:44:33.032371",
   "calendar": [],
   "tasks": [
-    {
-      "title": "Comprar anticongelante para o carro",
-      "notes": "",
-      "due": "",
-      "list": "My Tasks"
-    },
     {
       "title": "Entrar em contato com assistência da Jocca",
       "notes": "",
@@ -18,18 +12,6 @@
       "title": "Pagar água",
       "notes": "",
       "due": "2026-04-10T00:00:00.000Z",
-      "list": "My Tasks"
-    },
-    {
-      "title": "Pagar NOS",
-      "notes": "",
-      "due": "2026-03-19T00:00:00.000Z",
-      "list": "My Tasks"
-    },
-    {
-      "title": "Pagar energia",
-      "notes": "",
-      "due": "2026-03-16T00:00:00.000Z",
       "list": "My Tasks"
     },
     {
