@@ -11,18 +11,24 @@ Se estiver entre 07:55 e 08:15 e ainda não foi enviado o resumo hoje, gerar e e
 4. 📊 **Mercado Tech** — panorama rápido
 5. 💰 **Cotação** — EUR → BRL atualizada
 6. 🌙 **Backup GitHub** — status do backup automático da madrugada
-7. 💡 **Ideias Pendentes** — resumo das ideias em IDEIAS.md (se houver)
-8. 📅 **Compromissos** — eventos do Google Calendar (próximos 2 dias)
-9. ✅ **Tarefas** — tarefas pendentes do Google Tasks
+7. 📊 **Status dos Projetos** — buscar dados atualizados via `scripts/fetch-project-status.sh`
+8. 💡 **Ideias Pendentes** — resumo das ideias em IDEIAS.md (se houver)
+9. 📅 **Compromissos** — eventos do Google Calendar (próximos 2 dias)
+10. ✅ **Tarefas** — tarefas pendentes do Google Tasks
 
 ### Controle:
 - Registrar em `memory/heartbeat-state.json` a data/hora do último resumo enviado
 - Só enviar uma vez por dia
 
-### Verificação de Tarefas Noturnas:
-- Backup automático para GitHub (último commit, arquivos sincronizados)
-- Outras tarefas agendadas (verificar logs/systemd)
-- Reportar sucesso ou falha
+### Verificação do Backup GitHub:
+- Verificar status do backup automático da madrugada:
+  - Ler `backup.log` no workspace para ver o resultado
+  - Verificar último commit no repositório: `git log -1 --oneline`
+  - Confirmar que arquivos foram sincronizados
+- Reportar no resumo:
+  - ✅ Sucesso: "Backup OK - commit [hash] às [hora]"
+  - ❌ Falha: "Backup FALHOU - [erro]"
+  - Arquivos sincronizados (qtd de mudanças)
 
 ### Verificação de Google (07:00):
 - Executar `scripts/update-google-data.sh`
@@ -32,6 +38,35 @@ Se estiver entre 07:55 e 08:15 e ainda não foi enviado o resumo hoje, gerar e e
 ### Verificação de Ideias:
 - Ler `IDEIAS.md` e reportar ideias pendentes
 - Se houver ideias novas desde último resumo, destacar
+
+---
+
+### Verificação do crack_letra.log:
+- Ler `/media/Documentos/MIDNIGHT RIDER/arquivos/Letras/crack_letra.log`
+- Reportar status da quebra de senha:
+  - Senha encontrada? (destacar em caso positivo)
+  - Progresso atual (fase, % completado, senhas testadas)
+  - Próxima etapa prevista
+
+---
+
+### Verificação de Projetos:
+- Buscar dados atualizados dos projetos via API do GitHub:
+  ```bash
+  curl -s -H "Authorization: token $(cat ~/.config/github/pat_deykonsolutions)" \
+    "https://api.github.com/repos/deykonsolutions/corteclub-api/contents/project-flow.json" | jq -r '.content' | base64 -d
+  ```
+- Repetir para: `gopdv-backend`, `gopdv-frontend`, `gopdv-infra`
+- Apresentar no resumo diário:
+  - Progresso de cada projeto (features completas vs pendentes)
+  - Tarefas críticas e de alta prioridade pendentes
+  - Features em andamento
+  - Comparar com resumo anterior (houve progresso?)
+- Projetos a monitorar:
+  - **CorteClub API** (ativo)
+  - **GoPDV Backend** (pausado - priorizar Fluxo de Caixa e Backup)
+  - **GoPDV Frontend** (quase completo - Customer Display pendente)
+  - **GoPDV Infra** (ativo)
 
 ---
 

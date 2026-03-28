@@ -1,5 +1,6 @@
 {
   "CorteClub API": "https://github.com/deykonsolutions/corteclub-api/raw/refs/heads/main/project-flow.json?token=GHSAT0AAAAAADVTCWEQL7ONVVXGICB56POO2OCMZVQ",
   "GoPDV Backend": "https://github.com/deykonsolutions/gopdv-backend/raw/refs/heads/main/project-flow.json?token=GHSAT0AAAAAADVTCWEQL7ONVVXGICB56POO2OCMZVQ",
-  "GoPDV Frontend": "https://github.com/deykonsolutions/gopdv-frontend/raw/refs/heads/main/project-flow.json?token=GHSAT0AAAAAADVTCWEQL7ONVVXGICB56POO2OCMZVQ"
+  "GoPDV Frontend": "https://github.com/deykonsolutions/gopdv-frontend/raw/refs/heads/main/project-flow.json?token=GHSAT0AAAAAADVTCWEQL7ONVVXGICB56POO2OCMZVQ",
+  "GoPDV Infra": "https://github.com/deykonsolutions/gopdv-infra/raw/refs/heads/main/project-flow.json?token=GHSAT0AAAAAADVTCWEQL7ONVVXGICB56POO2OCMZVQ"
 }
