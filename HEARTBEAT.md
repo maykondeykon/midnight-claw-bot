@@ -20,6 +20,13 @@ Se estiver entre 07:55 e 08:15 e ainda não foi enviado o resumo hoje, gerar e e
 - Registrar em `memory/heartbeat-state.json` a data/hora do último resumo enviado
 - Só enviar uma vez por dia
 
+### Sincronização Notion <-> Project Flow:
+- Executar `scripts/sync-notion-projects.sh` para sincronizar tarefas
+- Buscar dados do GitHub e atualizar Notion
+- Reportar tarefas criadas/atualizadas
+
+---
+
 ### Verificação do Backup GitHub:
 - Verificar status do backup automático da madrugada:
   - Ler `backup.log` no workspace para ver o resultado
