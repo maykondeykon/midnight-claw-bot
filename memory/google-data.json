@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-03-29T07:00:02.840347",
-  "calendar": [],
+  "updated_at": "2026-03-30T07:00:02.755226",
+  "calendar": [
+    {
+      "summary": "Aniversário de Elielson Pires",
+      "start": "2026-04-01",
+      "location": "",
+      "description": ""
+    }
+  ],
   "tasks": [
     {
       "title": "Entrar em contato com assistência da Jocca",
