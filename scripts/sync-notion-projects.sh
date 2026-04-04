@@ -103,7 +103,8 @@ for repo in "${REPOS[@]}"; do
     # Buscar project-flow.json do repositório
     project_flow=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
         "https://api.github.com/repos/deykonsolutions/$repo/contents/project-flow.json" 2>/dev/null | \
-        jq -r '.content' 2>/dev/null | base64 -d 2>/dev/null) || true
+        jq -r '.content' 2>/dev/null | base64 -d 2>/dev/null | \
+        python3 -c "import sys, re; print(re.sub(r',(\s*[\]\\}])', r'\\1', sys.stdin.read()))" 2>/dev/null) || true
     
     if [ -z "$project_flow" ] || [ "$project_flow" = "null" ]; then
         echo "  ⚠️  project-flow.json não encontrado ou inválido"
