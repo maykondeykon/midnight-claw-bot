@@ -1,16 +1,16 @@
 {
-  "lastResumoSent": "2026-04-10T07:57:00+01:00",
-  "lastResumoSentAttempt": "2026-04-10T07:57:00+01:00",
+  "lastResumoSent": "2026-04-11T07:57:00+01:00",
+  "lastResumoSentAttempt": "2026-04-11T07:57:00+01:00",
   "lastChecks": {
-    "tasks": "2026-04-10T07:57:00+01:00",
-    "calendar": "2026-04-10T07:57:00+01:00",
-    "heartbeat": "2026-04-10T07:57:00+01:00",
-    "exchangeRate": "2026-04-10T07:57:00+01:00"
+    "tasks": "2026-04-11T07:57:00+01:00",
+    "calendar": "2026-04-11T07:57:00+01:00",
+    "heartbeat": "2026-04-11T07:57:00+01:00",
+    "exchangeRate": "2026-04-11T07:57:00+01:00"
   },
   "lastBackup": {
-    "time": "2026-04-10T03:00:00Z",
+    "time": "2026-04-11T03:00:00Z",
     "status": "success",
-    "commit": "2a239c0"
+    "commit": "d2bac7f"
   },
   "googleTokenExpired": "2026-03-16T00:00:00Z",
   "braveApiMissing": true
